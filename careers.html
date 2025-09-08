@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers - Chieni Supermarket</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset and base */
+    body { font-family: Arial, sans-serif; margin:0; padding:0; transition: background-color 0.3s; }
+    a { text-decoration: none; }
+    * { box-sizing: border-box; }
+
+    /* Fixed header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2E7D32;
+      color: white;
+      padding: 12px 24px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      flex-wrap: wrap;
+      transition: background-color 0.3s;
+    }
+
+    /* Logo + site name */
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform 0.3s;
+    }
+    header .logo img {
+      height: 40px;
+      width: auto;
+      transition: transform 0.4s, filter 0.3s;
+    }
+    header .logo img:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 8px #FFD54F);
+    }
+    header .logo h1 {
+      margin: 6;
+      font-size: 1.5rem;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    /* Navigation */
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    header nav a { 
+      color: orange; 
+      font-weight: 500; 
+      position: relative;
+      padding: 4px 0;
+      transition: color 0.3s;
+    }
+    header nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 2px;
+      background-color: #FFD54F;
+      transition: width 0.4s;
+    }
+    header nav a:hover {
+      color: #FFD54F;
+    }
+    header nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Fixed footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2E7D32;
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+      flex-wrap: wrap;
+      transition: background-color 0.3s;
+    }
+    footer a { 
+      color: #FF9800; 
+      margin-left: 50px; 
+      transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+    }
+    footer a:hover {
+      color: #FFD54F;
+      transform: translateY(-2px);
+      text-shadow: 0 0 8px #FFD54F;
+    }
+
+    /* Main content spacing */
+    main {
+      padding-top: 100px;  /* header height + extra */
+      padding-bottom: 100px; /* footer height + extra */
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 { color: #2E7D32; margin-bottom: 16px; }
+    .section { margin-bottom: 32px; }
+
+    /* Job cards */
+    .job-card {
+      border: 1px solid #ccc;
+      padding: 16px;
+      margin-bottom: 16px;
+      border-left: 4px solid #FF9800;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+    }
+    .job-card h3 { margin-top: 0; color: #2E7D32; }
+    .job-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #fff8e1, #fff3e0);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header nav { margin-top: 8px; justify-content: flex-start; gap: 8px; }
+      main { padding-top: 120px; padding-bottom: 120px; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="Chieni Supermarket.html"><img src="chienisuper-removebg-preview.png" alt="Chieni Supermarket Logo"></a>
+    <h1>Chieni Supermarket</h1>
+  </div>
+  <nav>
+    <a href="Chieni Supermarket.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="careers.html">Careers</a>
+    <a href="sustainability.html">Sustainability</a>
+  </nav>
+</header>
+
+<main>
+  <div class="section">
+    <h2>Join Our Team</h2>
+    <p>Chieni Supermarket is always looking for passionate and talented individuals to join our team. Check out our current openings below.</p>
+  </div>
+
+  <div class="section job-card">
+    <h3>Store Manager</h3>
+    <p>Location: Nyeri</p>
+    <p>Lead daily operations, manage staff, and ensure excellent customer service.</p>
+  </div>
+
+  <div class="section job-card">
+    <h3>Cashier</h3>
+    <p>Location: Nyahururu</p>
+    <p>Handle transactions efficiently and provide friendly customer support.</p>
+  </div>
+
+  <div class="section job-card">
+    <h3>Stock Assistant</h3>
+    <p>Location: Nyeri</p>
+    <p>Manage inventory, restock shelves, and maintain organization of the store.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Chieni Supermarket</p>
+  <div>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Chieni Supermarket</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #2e7d32; /* Orange */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    h2 {
+      color: #f97316;
+      margin-top: 30px;
+    }
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .value-card {
+      background: #fff7ed;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    footer a {
+      color: #f97316;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About Chieni Supermarket</h1>
+    <p>Your Trusted Neighborhood Supermarket</p>
+  </header>
+
+  <div class="container">
+    <h2>Who We Are</h2>
+    <p>
+      Chieni Supermarket is a proudly Kenyan retail store dedicated to bringing quality, affordability, 
+      and convenience closer to our customers. Since our establishment, we have been committed to serving 
+      families and communities with a wide variety of products ranging from groceries, fresh produce, 
+      household essentials, to personal care and lifestyle items.
+    </p>
+
+    <h2>Our Mission</h2>
+    <p>
+      To make everyday shopping simple, affordable, and enjoyable while supporting local suppliers 
+      and creating a positive shopping experience for our customers.
+    </p>
+
+    <h2>Our Vision</h2>
+    <p>
+      To be the leading community-centered supermarket brand that customers can always rely on 
+      for quality products and exceptional service.
+    </p>
+
+    <h2>Our Values</h2>
+    <div class="values">
+      <div class="value-card">
+        <h3>👥 Customer First</h3>
+        <p>We prioritize the needs of our customers in every decision we make.</p>
+      </div>
+      <div class="value-card">
+        <h3>✅ Quality</h3>
+        <p>We ensure that every product on our shelves meets the highest standards.</p>
+      </div>
+      <div class="value-card">
+        <h3>💰 Affordability</h3>
+        <p>We are committed to keeping prices fair without compromising on value.</p>
+      </div>
+      <div class="value-card">
+        <h3>🌍 Community</h3>
+        <p>We support local farmers, suppliers, and initiatives that uplift our communities.</p>
+      </div>
+    </div>
+
+    <h2>Contact Us</h2>
+    <p>
+      📍 Location: Chieni Supermarket <br>
+      📞 Phone: <a href="tel:+254728313100">+254 110 426 848</a> <br>
+      ✉️ Email: <a href="mailto:info@chienisupermarket.co.ke">info@chienisupermarket.co.ke</a>
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Chieni Supermarket. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
