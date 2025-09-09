@@ -2136,7 +2136,7 @@ document.getElementById('customRegisterForm').addEventListener('submit', async f
   const registerBtn = this.querySelector("button[type='submit']");
   const originalText = registerBtn.textContent;
 
-  // Check if passwords match
+  // Check if passwords matches
   if (password !== confirmPassword) {
       registerstatus.textContent="Passwords do not match!!";
       setTimeout(() => {
