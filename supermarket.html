@@ -58,7 +58,55 @@
   scrollbar-width: thin;
   scrollbar-color: #ccc transparent;
 }
+@media (max-width: 768px) {
+  header {
+    padding: 6px 10px;
+    gap: 6px;
+  }
 
+  .brand img {
+    width: 140px;
+  }
+
+  #searchInput {
+    width: 300px;
+    font-size: 13px;
+  }
+
+  .btn.small {
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+
+  .ads-bar {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+
+  .brand img {
+    width: 150px;
+  }
+
+  #searchInput {
+    width: 300px;
+    font-size: 12px;
+  }
+
+  .btn.small {
+    padding: 3px 5px;
+    font-size: 11px;
+  }
+
+  .ads-bar {
+    font-size: 12px;
+  }
+}
 .dropdown-content::-webkit-scrollbar {
   width: 6px;
 }
@@ -90,13 +138,37 @@
 
 /* .dropdown:hover .dropdown-content { display: block; } */
 
-
-
   /* ---------- Hero ---------- */
   .hero{height:400px;position:relative;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;overflow:hidden;transition:background-image .6s ease-in-out}
   .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,6,23,0.18), rgba(255,255,255,0.02))}
   .hero-text{position:relative;z-index:2;color:white;font-size:36px;font-weight:800;text-shadow:0 8px 26px rgba(2,6,23,0.5);padding:0 20px;text-align:center}
+   /* 📱 Responsiveness */
+@media (max-width: 960px) {
+  .hero {
+    height: 300px;
+  }
+  .hero-text {
+    font-size: 28px;
+  }
+}
 
+@media (max-width: 640px) {
+  .hero {
+    height: 220px;
+  }
+  .hero-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 180px;
+  }
+  .hero-text {
+    font-size: 18px;
+  }
+}
   /* ---------- Layout ---------- */
   .container{max-width:1400px;margin:0 auto;padding:18px}
 
@@ -208,6 +280,68 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+/* Tablet view: show more cards */
+@media (max-width: 768px) {
+  .product-card {
+    min-width: 160px;   /* smaller card */
+    padding: 8px;
+  }
+
+  .product-media {
+    height: 100px;      /* smaller image box */
+  }
+
+  .product-name {
+    font-size: 13px;
+    min-height: 30px;
+  }
+
+  .product-meta {
+    font-size: 12px;
+  }
+
+  .product-bottom div {
+    font-size: 11px;
+    -webkit-line-clamp: 2; /* less text lines */
+  }
+
+  .add-btn {
+    padding: 5px 7px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile view: fit even more */
+@media (max-width: 480px) {
+  .product-card {
+    min-width: 100px;   /* smaller width */
+    padding: 6px;
+  }
+
+  .product-media {
+    height: 80px;       /* much smaller image box */
+  }
+
+  .product-name {
+    font-size: 12px;
+    min-height: 24px;
+  }
+
+  .product-meta {
+    font-size: 11px;
+  }
+
+  .product-bottom div {
+    font-size: 10px;
+    -webkit-line-clamp: 2;
+  }
+
+  .add-btn {
+    padding: 4px 6px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
 }
 
 .add-btn {
@@ -352,7 +486,7 @@
 .btn.small:active {
   transform: translateY(0) scale(0.95);
 }
-/* Ads Bar Styling */
+
 /* Ads Bar Styling */
 .ads-bar {
   width: 100%;
@@ -568,7 +702,6 @@ footer {
 }
 
 
-/* Google button */
 
 /* Overlay */
 .account-panel-overlay {
@@ -617,7 +750,32 @@ footer {
   margin-top: 60px;
   color:red;
 }
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .account-panel-content {
+    width: 80%;       /* shrink width */
+    padding: 20px 15px;
+  }
 
+  .account-panel-close {
+    font-size: 180%;
+    margin-top: 60px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .account-panel-content {
+    width: 100%;      /* full width */
+    padding: 15px 10px;
+    border-radius: 0; /* no rounded corner for cleaner mobile view */
+  }
+
+  .account-panel-close {
+    font-size: 160%;
+    margin-top: 40px;
+  }
+}
 /* This is the start of map right panel*/
 .map-overlay {
   position: fixed;
@@ -795,10 +953,10 @@ footer {
 /* Images inside offers */
 .special-offer-media img,
 .special-offer-modal-media img {
-  width: 70%;
+  width: 50%;
   height: auto;
   object-fit: contain;
-  max-height: 280px;
+  max-height: 200px;
   display: block;
   margin: 0 auto;
 }
@@ -845,6 +1003,30 @@ footer {
   font-size: 12px;
   color: #444;
   margin-top: 6px;
+}
+@media (max-width: 600px) {
+  .special-offer-card {
+    border-radius: 6px;
+  }
+  .special-offer-media img {
+    max-height: 130px;
+  }
+  .special-offer-info {
+    padding: 6px;
+  }
+  .special-offer-desc {
+    font-size: 12px;
+  }
+  .special-new-price {
+    font-size: 13px;
+  }
+  .special-offer-badge {
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+  .special-offer-dates {
+    font-size: 10px;
+  }
 }
 /* End of pop styling for offer products */
 .cartpoperror{
@@ -914,12 +1096,11 @@ form button:hover { background: #218838; }
      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'; this.style.filter='brightness(1)';"
 >
     </div>
-<div style="margin: 30px 0 0 3px;">
+<div style="margin: 30px 0 0 3px; width: 300px;">
   <input 
     type="text" 
     id="searchInput" 
-  placeholder="Search for products..." 
-    style="width:120%; padding:7px 27px; font-size:16px; border-radius:8px; border:1px solid #ccc;">
+  placeholder="Search for products..." >
 </div>
 
     <nav>
@@ -997,11 +1178,9 @@ form button:hover { background: #218838; }
     <span class="account-panel-close">&times;</span>
 
     <!-- Brand / Logo -->
-    <h2 style="margin-top: -27px; color: #333; font-weight: 700;">Chieni Supermarket</h2>
-
+    <h2 style="margin-top: -40px; color: #333; font-weight: 700;">Chieni Supermarket</h2>
     <hr>
-
-    <!-- Account info -->
+       <!-- Account info -->
     <div id="accountInfo" style="color: black;">
       <p><strong>Username:</strong> <span id="accountName"></span></p>
       <p><strong>Email:</strong> <span id="accountemail"></span></p>
@@ -1642,7 +1821,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     accountBtn.textContent = "Sign In";
     accountBtn.addEventListener("click", () => {
-      window.location.href = "Chieni Supermarket.html"; // redirect if not logged in
+      window.location.href = "index.html"; // redirect if not logged in
     });
   }
 
@@ -1999,5 +2178,4 @@ init();}
 </script>
 
 </body>
-
 </html>
