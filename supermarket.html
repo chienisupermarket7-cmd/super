@@ -1153,7 +1153,7 @@ form button:hover { background: #218838; }
 
   if (!token) {
     // No token → redirect immediately
-    window.location.href = "Chieni Supermarket.html";
+    window.location.href = "index.html";
   } else {
 let PRODUCTS = [];
 let OFFERS = [];
@@ -1162,7 +1162,7 @@ let OFFERS = [];
 async function loadAllProducts() {
   try {
     // 1. General products
-    const responseProducts = await fetch("http://192.168.1.105:5000/viewchieni");
+    const responseProducts = await fetch("https://super1.onrender.com/viewchieni");
     const dataProducts = await responseProducts.json();
     if(dataProducts.status === "OK") {
       PRODUCTS = dataProducts.data.map(item => ({
@@ -1183,7 +1183,7 @@ async function loadAllProducts() {
     }
 
     // 2. Offers
-  const responseOffers = await fetch("http://192.168.1.105:5000/offers");
+  const responseOffers = await fetch("https://super1.onrender.com/offers");
 const dataOffers = await responseOffers.json();
 if (dataOffers.status === "OK") {
   OFFERS = dataOffers.data.map(item => ({
@@ -1678,7 +1678,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (logoutBtn) {
     logoutBtn.addEventListener('click', () => {
       sessionStorage.removeItem("token");
-      window.location.href = "Chieni Supermarket.html"; // redirect after logout
+      window.location.href = "index.html"; // redirect after logout
     });
   }
 });
@@ -1691,7 +1691,7 @@ function checkout() {
 
   if (!tokenn) {
     // If not logged in, redirect back to supermarket
-    window.location.href = "Chieni Supermarket.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -1999,4 +1999,5 @@ init();}
 </script>
 
 </body>
+
 </html>
